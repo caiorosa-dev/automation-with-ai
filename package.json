@@ -1,0 +1,27 @@
+{
+  "name": "test-automatizacao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "llm-api": "^1.6.0",
+    "openai": "^4.52.7",
+    "puppeteer": "^22.13.1",
+    "tsup": "^8.2.1",
+    "zod": "^3.23.8",
+    "zod-gpt": "^0.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.3"
+  }
+}
