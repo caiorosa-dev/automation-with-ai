@@ -67,7 +67,7 @@ export const executeAutomation = async (customer: Customer) => {
 
   console.log('Acessando o site de cadastro...');
   await page.goto('https://agrega.basf.com.br/cadastro');
-  //await page.waitForNavigation();
+  await page.waitForNavigation();
 
   console.log('Preenchendo cultura...');
   await page.waitForSelector('#rc_select_1'); // Seleciona o campo de seleção de cultura
