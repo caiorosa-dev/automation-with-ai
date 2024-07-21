@@ -25,7 +25,7 @@ export async function loadImages() {
       spinner.update({
         text: `[IA] Extraindo dados da imagem: ${file}...`,
       });
-      const extractedObject = await extractDataFromImageFile(filePath, true);
+      const extractedObject = await extractDataFromImageFile(filePath);
 
       spinner.update({
         text: `[IA] Processando dados da imagem: ${file}...`,
@@ -43,6 +43,8 @@ export async function loadImages() {
           email: customer.email,
           hectares: customer.hectares,
           status: 'WAITING',
+          importedAt: new Date().toLocaleString(),
+          importedFrom: file,
         });
       }
 

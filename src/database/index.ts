@@ -58,6 +58,18 @@ class Database {
     }
   }
 
+  updateCustomer(customerToUpdate: DatabaseCustomer) {
+    if (this.data == null) throw new Error('Database data is null');
+
+    const customerIndex = this.data.customers.findIndex(
+      (customer) => customer.email === customerToUpdate.email
+    );
+
+    if (customerIndex !== undefined && customerIndex !== -1) {
+      this.data.customers[customerIndex] = customerToUpdate;
+    }
+  }
+
   addPhoto(photo: DatabasePhoto) {
     if (this.data == null) throw new Error('Database data is null');
 

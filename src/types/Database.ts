@@ -19,6 +19,9 @@ export type DatabaseCustomer = {
   hectares: number;
   status: Status;
   errorMessage?: string;
+  importedFrom?: string;
+  importedAt?: string;
+  timeToProcess?: number;
 };
 
 export type DatabaseData = {

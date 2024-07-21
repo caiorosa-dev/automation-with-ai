@@ -17,6 +17,6 @@ export const customerSchema = z.object({
     .int()
     .positive()
     .describe(
-      'Escolha um valor aleatório porém condizente com o valor gasto do cliente. O número deve ser entre 20 e 50.'
+      'Escolha um valor aleatório levemente condizente com o valor gasto do cliente. O número deve ser entre 15 e 50.'
     ),
 });
