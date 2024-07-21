@@ -39,7 +39,11 @@ class Database {
     return this.data?.customers || [];
   }
 
-  setCustomerStatus(customerEmail: string, status: Status) {
+  setCustomerStatus(
+    customerEmail: string,
+    status: Status,
+    errorMessage?: string
+  ) {
     if (this.data == null) throw new Error('Database data is null');
 
     const customerIndex = this.data.customers.findIndex(
@@ -48,6 +52,9 @@ class Database {
 
     if (customerIndex !== undefined && customerIndex !== -1) {
       this.data.customers[customerIndex].status = status;
+      if (errorMessage) {
+        this.data.customers[customerIndex].errorMessage = errorMessage;
+      }
     }
   }
 

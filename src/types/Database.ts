@@ -18,6 +18,7 @@ export type DatabaseCustomer = {
   email: string;
   hectares: number;
   status: Status;
+  errorMessage?: string;
 };
 
 export type DatabaseData = {
