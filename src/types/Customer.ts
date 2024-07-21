@@ -10,7 +10,7 @@ export const customerSchema = z.object({
     .string()
     .email()
     .describe(
-      'Formado pelo primeiro e ultimo nome do cliente, com "@gmail.com" no final.'
+      'Formado pelo primeiro e ultima parte do nome do cliente, com "@gmail.com" no final, sem espaços e sem pontos no email. Exemplo: JUNIOR HUMBERTO SABEI -> juniorsabei@gmail.com'
     ),
   hectares: z
     .number()

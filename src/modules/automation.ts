@@ -140,5 +140,3 @@ export const executeAutomation = async (customer: Customer) => {
   await browser.close();
   console.log('Navegador fechado.');
 };
-
-module.exports = { executeAutomation };

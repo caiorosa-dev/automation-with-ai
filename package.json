@@ -11,8 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@inquirer/prompts": "^5.2.1",
+    "chalk": "^5.3.0",
     "dotenv": "^16.4.5",
     "llm-api": "^1.6.0",
+    "nanospinner": "^1.1.0",
     "openai": "^4.52.7",
     "puppeteer": "^22.13.1",
     "tsup": "^8.2.1",
